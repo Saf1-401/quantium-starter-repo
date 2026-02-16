@@ -4,11 +4,12 @@ import pandas as pd
 
 app = Dash()
 
-df = pd.read_csv("../data/full_daily_sales_data.csv")
+df = pd.read_csv("full_daily_sales_data.csv")
 
 app.layout = html.Div([
     html.H1(
       "Pink Morsel Visualisation",
+      id='header',
       style={'textAlign': 'center'}
     ),
     dcc.Graph(id='sales-figure'),
